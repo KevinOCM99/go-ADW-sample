@@ -16,12 +16,12 @@ var localDB = map[string]string{
 }
 
 var autonomousDB = map[string]string{
-	"service":        "wdsshsl4d6foyhp_shoplazza_medium.adb.oraclecloud.com",
-	"username":       "ADMIN",
-	"server":         "adb.ap-chuncheon-1.oraclecloud.com",
+	"service":        "your service name in tnsnames.ora",
+	"username":       "your schema/username",
+	"server":         "your host name in tnsnames.ora",
 	"port":           "1522",
-	"password":       "WelcomE__12345",
-	"walletLocation": "/Users/kevzhang_cn/Work_DIR/Work/shoplazza",
+	"password":       "your password",
+	"walletLocation": "your wallet path",
 }
 
 func main() {
