@@ -16,13 +16,10 @@ var localDB = map[string]string{
 }
 
 var autonomousDB = map[string]string{
-	"service":        "your service name in tnsnames.ora",
-	"username":       "your schema/username",
-	"server":         "your host name in tnsnames.ora",
-	"port":           "1522",
-	"password":       "your password",
 	"walletLocation": "your wallet path",
-	"ssl_dn": "your ssl_dn",
+	"tns_entry":	  "your tns entry: dbxxxxdb2022xxx_low",
+	"username":       "your schema/username",
+	"password":       "your password",
 }
 
 func main() {
