@@ -22,6 +22,7 @@ var autonomousDB = map[string]string{
 	"port":           "1522",
 	"password":       "your password",
 	"walletLocation": "your wallet path",
+	"ssl_dn": "your ssl_dn",
 }
 
 func main() {
