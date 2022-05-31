@@ -12,8 +12,8 @@ func doDBThingsThroughInstantClient(dbParams map[string]string) {
 	var err error
 	if val, ok := dbParams["walletLocation"]; ok && val != "" {
 		db, err = sql.Open("godror", fmt.Sprintf(`user="%s" password="%s"
-		connectString="tcps://%s:%s/%s?wallet_location=%s"
-		   `, dbParams["username"], dbParams["password"], dbParams["server"], dbParams["port"], dbParams["service"], dbParams["walletLocation"]))
+		connectString="tcps://%s:%s/%s?wallet_location=%s&ssl_server_cert_dn=\"%s\""
+		   `, dbParams["username"], dbParams["password"], dbParams["server"], dbParams["port"], dbParams["service"], dbParams["walletLocation"] , dbParams["ssl_dn"]))
 	}
 	if val, ok := dbParams["walletLocation"]; !ok || val == "" {
 		connectionString := "oracle://" + dbParams["username"] + ":" + dbParams["password"] + "@" + dbParams["server"] + ":" + dbParams["port"] + "/" + dbParams["service"]
@@ -43,8 +43,8 @@ func doDBThingsThroughInstantClientArray(dbParams map[string]string) {
 	var err error
 	if val, ok := dbParams["walletLocation"]; ok && val != "" {
 		db, err = sql.Open("godror", fmt.Sprintf(`user="%s" password="%s"
-		connectString="tcps://%s:%s/%s?wallet_location=%s"
-		   `, dbParams["username"], dbParams["password"], dbParams["server"], dbParams["port"], dbParams["service"], dbParams["walletLocation"]))
+		connectString="tcps://%s:%s/%s?wallet_location=%s&ssl_server_cert_dn=\"%s\""
+		   `, dbParams["username"], dbParams["password"], dbParams["server"], dbParams["port"], dbParams["service"], dbParams["walletLocation"] , dbParams["ssl_dn"]))
 	}
 	if val, ok := dbParams["walletLocation"]; !ok || val == "" {
 		connectionString := "oracle://" + dbParams["username"] + ":" + dbParams["password"] + "@" + dbParams["server"] + ":" + dbParams["port"] + "/" + dbParams["service"]
